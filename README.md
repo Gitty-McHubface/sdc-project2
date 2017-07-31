@@ -47,7 +47,7 @@ Below is a histogram showing the distribution of sign types in the training, val
 
 ## Data Pre-processing
 
-For the data pre-processing step, I followed the recommendations in the [Stanford CS231n lecture notes](https://cs231n.github.io/neural-networks-2/). Based on the notes and lecture, I decided to zero center each color channel of the training images. Below is an image showing the mean color of the training dataset.
+For the data pre-processing step, I followed the recommendations in the [Stanford CS231n lecture and notes](https://cs231n.github.io/neural-networks-2/). Based on the notes and lecture, I decided to zero center each color channel of the training dataset. Below is an image showing the mean color of the training dataset using this method.
 
 ![alt_text][mean_image]
 
@@ -98,8 +98,6 @@ My second attempt at improving validation accuracy was to try to use a deeper mo
 | Convolution 3x3	    | etc.      									|
 | Fully connected		| etc.        									|
 | Softmax				| etc.        									|
-|						|												|
-|						|												|
  
 
 
