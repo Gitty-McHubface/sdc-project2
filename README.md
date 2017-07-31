@@ -77,7 +77,7 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 | Fully connected		|    43   									|
 | Softmax				|   									|
 
-After some experimentation, the following hyperparameter values yielded the best results.
+The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
 **Weight initialization:**
 * mean = 0
@@ -138,6 +138,16 @@ My second attempt at improving validation accuracy was to try to use a deeper mo
 | Fully connected		|    43   									|
 | Softmax				|   									|
  
+The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
+
+**Weight initialization:**
+* As recommended in the CS231n lecture, I used an initialization that has been shown experimentally to perform better for deep CNNs (Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification, He et al.). This was accomplished using the tf.contrib.layers.variance_scaling_initializer with factor=2.0 and mode='FAN_IN'.
+
+**Training:**
+* epochs = 100
+* batch size = 256
+* learning rate = 0.0002
+* dropout keep prob. = 0.5
 
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
