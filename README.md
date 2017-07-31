@@ -43,13 +43,36 @@ Below is a histogram showing the distribution of sign types in the training, val
 
 ![alt text][sign_hist]
 
-## Model Architecture
+## Data Pre-processing
 
 As a first step, I decided to zero center each color channel of the training images. I did this because... Below is an image showing the color of the mean of each color channel in the training dataset.
 
 ![alt_text][mean_image]
 
-I decided not to normalize the images since the range of the possible values for the features (pixels) is nearly equal (0-255).
+I decided not to normalize the images since the range of the possible values for the features (pixels) is equal (0-255).
+
+## Model Architecture
+
+My first attempt at improving validation accuracy was to modify the hyperparameters to LeNet. LeNet has the following architecture:
+
+| Layer         		|     Description	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Input         		| 28x28x3 RGB image   							| 
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 32x32x6 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
+| Convolution 3x3	    | 1x1 stride, valid padding, outputs 10x10x16     									|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
+| Fully connected		| 140        									|
+| RELU					|												|
+| Fully connected		| 84       									|
+| RELU					|										|
+| Fully connected		|    43   									|
+| RELU					|												|
+| Softmax				|   									|
+|						|												|
+|						|												|
 
 My final model consisted of the following layers:
 
