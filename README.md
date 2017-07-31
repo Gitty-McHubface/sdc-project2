@@ -16,7 +16,7 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [dl_1]: ./downloaded_sign_images/1.png "Speed limit (30km/h)"
-[d;_2]: ./downloaded_sign_images/11.png "Right-of-way at the next intersection"
+[dl_2]: ./downloaded_sign_images/11.png "Right-of-way at the next intersection"
 [dl_3]: ./downloaded_sign_images/17.png "No entry"
 [dl_4]: ./downloaded_sign_images/18.png "General caution"
 [dl_5]: ./downloaded_sign_images/21.png "Double curve"
