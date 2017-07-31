@@ -1,6 +1,6 @@
 # Traffic Sign Recognition
 
-The goals / steps of this project are the following:
+The steps of this project are the following:
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
@@ -10,10 +10,11 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-
 [sample_image]: ./sample_image.png "Sample image"
 
 [sign_hist]: ./sign_hist.png "Traffic Signs"
+
+[mean_image]: ./sample_image_processed.png "Mean image"
 
 [dl_1]: ./downloaded_sign_images/1.png "Speed limit (30km/h)"
 [dl_2]: ./downloaded_sign_images/11.png "Right-of-way at the next intersection"
@@ -38,7 +39,7 @@ Below is a sample traffic sign image from the dataset :
 
 ![alt_text][sample_image]
 
-Here is an exploratory visualization of the data set. It is a histogram showing the fequency of each sign type in the training, validation and testing datasets.
+Below is a histogram showing the fequency of each sign type in the training, validation and testing datasets.
 
 ![alt text][sign_hist]
 
@@ -46,7 +47,9 @@ Here is an exploratory visualization of the data set. It is a histogram showing 
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
-As a first step, I decided to convert the images to grayscale because ...
+As a first step, I decided to zero center each color channel of the training images. I did this because... Below is the color of the mean of each color channel in the training dataset.
+
+![alt_text][mean_image]
 
 Here is an example of a traffic sign image before and after grayscaling.
 
