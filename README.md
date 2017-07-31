@@ -25,9 +25,10 @@ The steps of this project are the following:
 [dl_7]: ./downloaded_sign_images/28.png "Children crossing"
 [dl_8]: ./downloaded_sign_images/31.png "Wild animals crossing"
 
-[lenet_1]: ./trunc_b256_e100_do_lenet.png "LeNet 1"
+[lenet_1]: ./graph_trunc_b256_e100_do_lenet.png "LeNet 1"
 
 [vgg_1]: ./graph-he-b256-e100-r0001-vgg.png "VGG 1"
+[vgg_2]: ./graph-do-he-b256-e100-r0001-vgg.png "VGG 1"
 
 ## Data Set Summary & Exploration
 
@@ -162,6 +163,7 @@ The final result for this model was:
 
 
 ![alt text][vgg_1]
+![alt text][vgg_2]
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
