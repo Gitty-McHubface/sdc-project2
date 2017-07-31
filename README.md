@@ -25,6 +25,8 @@ The steps of this project are the following:
 [dl_7]: ./downloaded_sign_images/28.png "Children crossing"
 [dl_8]: ./downloaded_sign_images/31.png "Wild animals crossing"
 
+[lenet_1]: ./trunc_b256_e100_do_lenet.png "LeNet 1"
+
 ## Data Set Summary & Exploration
 
 I used the python and the numpy library to calculate summary statistics of the traffic signs data set:
@@ -61,7 +63,7 @@ My first attempt at improving validation accuracy was to modify the hyperparamet
 | Convolution 5x5     	| 1x1 stride, valid padding, outputs 32x32x6 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| Convolution 3x3	    | 1x1 stride, valid padding, outputs 10x10x16     									|
+| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16     									|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
 | Fully connected		| 140        									|
@@ -73,6 +75,8 @@ My first attempt at improving validation accuracy was to modify the hyperparamet
 | Softmax				|   									|
 |						|												|
 |						|												|
+
+![alt text][lenet_1]
 
 My final model consisted of the following layers:
 
