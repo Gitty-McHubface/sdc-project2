@@ -47,11 +47,11 @@ Below is a histogram showing the distribution of sign types in the training, val
 
 ## Data Pre-processing
 
-As a first step, I decided to zero center each color channel of the training images. I did this because... Below is an image showing the color of the mean of each color channel in the training dataset.
+For the data pre-processing step, I followed the recommendations in the [Stanford CS231n lecture notes](https://cs231n.github.io/neural-networks-2/). Based on the notes and lecture, I decided to zero center each color channel of the training images. Below is an image showing the mean color of the training dataset.
 
 ![alt_text][mean_image]
 
-I decided not to normalize the images since the range of the possible values for the features (pixels) is equal (0-255).
+I decided not to normalize the images since "the relative scales of pixels are already approximately equal (and in range from 0 to 255), so it is not strictly necessary to perform this additional preprocessing step." (CS231n notes)
 
 ## Model Architecture
 
@@ -75,14 +75,19 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 | RELU					|										|
 | Dropout | keep probability 0.5 |
 | Fully connected		|    43   									|
-| RELU					|												|
 | Softmax				|   									|
-|						|												|
-|						|												|
+
+After some experimentation, the following hyperparameter values yielded the best results:
+EPOCHS = 200
+BATCH_SIZE = 256
+LEARN_RATE = 0.0002
+DROPOUT_KEEP = 0.5
 
 ![alt text][lenet_1]
 
-My final model consisted of the following layers:
+### Model 2
+
+My second attempt at improving validation accuracy was to try to use a deeper model similar to VGGNet. The model had the following architecture:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -164,8 +169,3 @@ For the first image, the model is relatively sure that this is a stop sign (prob
 
 
 For the second image ... 
-
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
-
-
