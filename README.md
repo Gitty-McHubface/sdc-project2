@@ -116,6 +116,19 @@ Here are the German traffic signs that I found on the web:
 
 The model should not have any problem classifying any of these images. All of these images contain a straight-on perspective and are high contrast. Clearly I was biased when selecting them. Many of the images in the original data set have terrible contrast and are difficult for me to determine what class they belong to.
 
+Here are the results of the prediction:
+
+| Image			        |     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| Speed limit (30km/h)   | Speed limit (30km/h)   |
+| Right-of-way at the next intersection   									|   Right-of-way at the next intersection  |
+| No entry    			| No entry 										|
+| General caution 				| General caution 										|
+| Double curve	      		| Right-of-way at the next intersection					 				|
+| Pedestrian			| Pedestrian     							|
+| Children crossing			| Children crossing     							|
+| Wild animals crossing | Wild animals crossing |
+
 ### Model 2
 
 My second attempt at improving validation accuracy was to try to use a deeper model with an architecture similar to VGGNet. The model has the following architecture:
@@ -169,6 +182,7 @@ The final result for this model was:
 * Training set accuracy: 1.000
 * Validation set accuracy: 0.960
 * Test set accuracy: 0.952
+* Downloaded image set accuracy: 0.75
 
 ![alt text][vgg_1]
 
@@ -205,11 +219,14 @@ Here are the results of the prediction:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed limit (30km/h)   | Speed limit (30km/h)   |
+| Right-of-way at the next intersection   									|   Right-of-way at the next intersection  |
+| No entry    			| No entry 										|
+| General caution 				| General caution 										|
+| Double curve	      		| Right-of-way at the next intersection					 				|
+| Pedestrian			| Pedestrian     							|
+| Children crossing			| Children crossing     							|
+| Wild animals crossing | Wild animals crossing |
 
 
 The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
