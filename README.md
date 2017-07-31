@@ -28,7 +28,7 @@ The steps of this project are the following:
 [lenet_1]: ./graph_trunc_b256_e100_do_lenet.png "LeNet 1"
 
 [vgg_1]: ./graph_he_b256_e100_r0001_vgg.png "VGG 1"
-[vgg_2]: ./graph_do_he_b256_e150_r0001_vgg.png "VGG 1"
+[vgg_2]: ./graph_do_he_b256_e150_r0001_vgg.png "VGG 2"
 
 ## Data Set Summary & Exploration
 
@@ -163,6 +163,7 @@ The final result for this model was:
 
 
 ![alt text][vgg_1]
+
 ![alt text][vgg_2]
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
