@@ -28,7 +28,7 @@ The steps of this project are the following:
 [lenet_1]: ./graph_trunc_b256_e100_do_lenet.png "LeNet 1"
 
 [vgg_1]: ./graph_he_b256_e100_r0001_vgg.png "VGG 1"
-[vgg_2]: ./graph_do_he_b256_e150_r0001_vgg.png "VGG 2"
+[vgg_2]: ./graph_he_do_b256_e150_r0001_vgg.png "VGG 2"
 
 ## Data Set Summary & Exploration
 
