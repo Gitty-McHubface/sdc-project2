@@ -114,7 +114,7 @@ Here are the German traffic signs that I found on the web:
 ![alt text][dl_1] ![alt text][dl_2] ![alt text][dl_3] ![alt text][dl_4] 
 ![alt text][dl_5] ![alt text][dl_6] ![alt text][dl_7] ![alt text][dl_8]
 
-The model should not have any problem classifying any of these images. All of these images contain a straight-on perspective and are high contrast. Clearly I was biased when selecting them. Many of the images in the original data set have terrible contrast and are difficult for me to determine what class they belong to.
+The model should not have any problem classifying these images. All of these images contain a straight-on perspective and are high contrast. Clearly I was biased when selecting them. Many of the images in the original data set have terrible contrast and are difficult to see what class they belong to.
 
 Here are the results of the prediction:
 
@@ -128,6 +128,67 @@ Here are the results of the prediction:
 | Pedestrian			| Pedestrian     							|
 | Children crossing			| Children crossing     							|
 | Wild animals crossing | Wild animals crossing |
+
+The model was able to correctly guess 7 of the 8 traffic signs, which gives an accuracy of 87.5%.
+
+Here are the top-5 probabilities for each sign:
+ 
+|                   |
+|:-----------------:|
+|  Right-of-way at the next intersection -- 0.99987
+  Pedestrians -- 0.00010
+  Children crossing -- 0.00002
+  Beware of ice/snow -- 0.00002
+  End of all speed and passing limits -- 0.00000 |
+
+2:
+  Wild animals crossing -- 1.00000
+  Slippery road -- 0.00000
+  Double curve -- 0.00000
+  Right-of-way at the next intersection -- 0.00000
+  Beware of ice/snow -- 0.00000
+
+3:
+  No entry -- 1.00000
+  Stop -- 0.00000
+  Traffic signals -- 0.00000
+  Speed limit (70km/h) -- 0.00000
+  Priority road -- 0.00000
+
+4:
+  Pedestrians -- 0.99541
+  General caution -- 0.00311
+  Right-of-way at the next intersection -- 0.00145
+  Road narrows on the right -- 0.00003
+  Traffic signals -- 0.00000
+
+5:
+  Speed limit (30km/h) -- 0.99994
+  Speed limit (50km/h) -- 0.00005
+  Speed limit (80km/h) -- 0.00001
+  Speed limit (20km/h) -- 0.00000
+  Speed limit (70km/h) -- 0.00000
+
+6:
+  General caution -- 1.00000
+  Traffic signals -- 0.00000
+  Pedestrians -- 0.00000
+  Dangerous curve to the right -- 0.00000
+  Speed limit (20km/h) -- 0.00000
+
+7:
+  Right-of-way at the next intersection -- 1.00000
+  Beware of ice/snow -- 0.00000
+  Pedestrians -- 0.00000
+  Slippery road -- 0.00000
+  Double curve -- 0.00000
+
+8:
+  Children crossing -- 0.99951
+  Slippery road -- 0.00048
+  Road narrows on the right -- 0.00000
+  Dangerous curve to the right -- 0.00000
+  Bicycles crossing -- 0.00000
 
 ### Model 2
 
