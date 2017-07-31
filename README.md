@@ -79,12 +79,12 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 
 After some experimentation, the following hyperparameter values yielded the best results.
 
-** Weight initialization:
+**Weight initialization:**
 
- *MU = 0
- *SIGMA = 0.05
+* MU = 0
+* SIGMA = 0.05
 
-** Training:
+**Training:**
  
  *EPOCHS = 200
  *BATCH_SIZE = 256
