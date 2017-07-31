@@ -211,9 +211,7 @@ My second attempt at improving validation accuracy was to try to use a deeper mo
 | Fully connected		|    43   									|
 | Softmax				|   									|
 
-I decided to base the model off of VGGNet because I wanted to experiment with regularization using a deeper model with wider layers.
-
-The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
+I decided to base the model off of VGGNet because I wanted to experiment with regularization using a deeper model with wider layers. The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
 **_Weight initialization:_**
 * As recommended in the CS231n lecture, I used a weight initialization that has been shown to perform better for deep CNNs (Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification, He et al.). This was accomplished using the tf.contrib.layers.variance_scaling_initializer with factor=2.0 and mode='FAN_IN'.
@@ -241,4 +239,4 @@ The following graphs show the accuracy and loss during training with dropout reg
 
 ![alt text][vgg_2]
 
-While this model has marginally worse accuracy on the validation set, it takes ~41x as long to train.
+Cleary the first model is a better choice. While this model has marginally worse accuracy on the validation set, it takes ~41x as long to train.
