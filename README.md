@@ -114,7 +114,7 @@ Here are the German traffic signs that I found on the web:
 ![alt text][dl_1] ![alt text][dl_2] ![alt text][dl_3] ![alt text][dl_4] 
 ![alt text][dl_5] ![alt text][dl_6] ![alt text][dl_7] ![alt text][dl_8]
 
-The 30 km/h speed sign might be difficult to classify because it might be hard for a model to differentiate it from the 80 km/h signs. The model should not have any problem classifying the rest of the downloaded images. All of the images contain a straight-on perspective and are high contrast. Many of the images in the original data set have terrible contrast and are difficult to see what class they belong to.
+The 30 km/h speed sign might be difficult to classify because it might be hard to differentiate from the 80 km/h sign. The model should not have any problem classifying the rest of the downloaded images. All of the images contain a straight-on perspective and are high contrast. Many of the images in the original data set have terrible contrast and it is difficult to see what class they belong to.
 
 **_Here are the results of the prediction:_**
 
