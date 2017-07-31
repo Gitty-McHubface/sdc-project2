@@ -114,7 +114,7 @@ Here are the German traffic signs that I found on the web:
 ![alt text][dl_1] ![alt text][dl_2] ![alt text][dl_3] ![alt text][dl_4] 
 ![alt text][dl_5] ![alt text][dl_6] ![alt text][dl_7] ![alt text][dl_8]
 
-The model should not have any problem classifying these images. All of these images contain a straight-on perspective and are high contrast. Clearly I was biased when selecting them. Many of the images in the original data set have terrible contrast and are difficult to see what class they belong to.
+Maybe the 30 km/h speed sign would be a problem because it might be hard for a model to different from the 80 km/h signs. The model should not have any problem classifying the rest of the downloaded images. All of the images contain a straight-on perspective and are high contrast. Many of the images in the original data set have terrible contrast and are difficult to see what class they belong to.
 
 Here are the results of the prediction:
 
@@ -125,7 +125,7 @@ Here are the results of the prediction:
 | No entry    			| No entry 										|
 | General caution 				| General caution 										|
 | Double curve	      		| Right-of-way at the next intersection					 				|
-| Pedestrian			| Pedestrian     							|
+| Pedestrians			| Pedestrians     							|
 | Children crossing			| Children crossing     							|
 | Wild animals crossing | Wild animals crossing |
 
@@ -133,62 +133,45 @@ The model was able to correctly guess 7 of the 8 traffic signs, which gives an a
 
 Here are the top-5 probabilities for each sign:
  
-|                   |
-|:-----------------:|
-|  Right-of-way at the next intersection -- 0.99987
-  Pedestrians -- 0.00010
-  Children crossing -- 0.00002
-  Beware of ice/snow -- 0.00002
-  End of all speed and passing limits -- 0.00000 |
+Speed limit (30km/h):
+  1. Speed limit (30km/h) -- 0.99994
+  2. Speed limit (50km/h) -- 0.00005
+  3. Speed limit (80km/h) -- 0.00001
+  4. Speed limit (20km/h) -- 0.00000
+  5. Speed limit (70km/h) -- 0.00000
 
-2:
-  Wild animals crossing -- 1.00000
-  Slippery road -- 0.00000
-  Double curve -- 0.00000
-  Right-of-way at the next intersection -- 0.00000
-  Beware of ice/snow -- 0.00000
+Right-of-way at the next intersection
+  1. Right-of-way at the next intersection -- 1.00000
 
-3:
-  No entry -- 1.00000
-  Stop -- 0.00000
-  Traffic signals -- 0.00000
-  Speed limit (70km/h) -- 0.00000
-  Priority road -- 0.00000
+No entry:
+  1. No entry -- 1.00000
 
-4:
-  Pedestrians -- 0.99541
-  General caution -- 0.00311
-  Right-of-way at the next intersection -- 0.00145
-  Road narrows on the right -- 0.00003
-  Traffic signals -- 0.00000
+General caution:
+  1. General caution -- 1.00000
 
-5:
-  Speed limit (30km/h) -- 0.99994
-  Speed limit (50km/h) -- 0.00005
-  Speed limit (80km/h) -- 0.00001
-  Speed limit (20km/h) -- 0.00000
-  Speed limit (70km/h) -- 0.00000
+Double curve:
+  1. Right-of-way at the next intersection -- 0.99987
+  2. Pedestrians -- 0.00010
+  3. Children crossing -- 0.00002
+  4. Beware of ice/snow -- 0.00002
+  5. End of all speed and passing limits -- 0.00000
 
-6:
-  General caution -- 1.00000
-  Traffic signals -- 0.00000
-  Pedestrians -- 0.00000
-  Dangerous curve to the right -- 0.00000
-  Speed limit (20km/h) -- 0.00000
+Pedestrians:
+  1. Pedestrians -- 0.99541
+  2. General caution -- 0.00311
+  3. Right-of-way at the next intersection -- 0.00145
+  4. Road narrows on the right -- 0.00003
+  5. Traffic signals -- 0.00000
 
-7:
-  Right-of-way at the next intersection -- 1.00000
-  Beware of ice/snow -- 0.00000
-  Pedestrians -- 0.00000
-  Slippery road -- 0.00000
-  Double curve -- 0.00000
+Children crossing:
+  1. Children crossing -- 0.99951
+  2. Slippery road -- 0.00048
+  3. Road narrows on the right -- 0.00000
+  4. Dangerous curve to the right -- 0.00000
+  5. Bicycles crossing -- 0.00000
 
-8:
-  Children crossing -- 0.99951
-  Slippery road -- 0.00048
-  Road narrows on the right -- 0.00000
-  Dangerous curve to the right -- 0.00000
-  Bicycles crossing -- 0.00000
+Wild animals crossing:
+  1. Wild animals crossing -- 1.00000
 
 ### Model 2
 
