@@ -143,7 +143,6 @@ My second attempt at improving validation accuracy was to try to use a deeper mo
 | Softmax				|   									|
 
 
-
 The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
 **Weight initialization:**
@@ -160,7 +159,7 @@ The final result for this model was:
 * Training set accuracy: 1.000
 * Validation set accuracy: 0.960
 * Test set accuracy: 0.952
-* Downloaded image set accuracy: 0.875
+
 
 ![alt text][vgg_1]
 
