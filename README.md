@@ -164,9 +164,7 @@ If a well known architecture was chosen:
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
 
-###Test a Model on New Images
-
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
+## Testing On New Images
 
 Here are the German traffic signs that I found on the web:
 
