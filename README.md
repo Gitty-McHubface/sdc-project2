@@ -94,7 +94,7 @@ The model was trained using the TensorFlow AdamOptimizer to reduce the cross ent
 * learning rate = 0.0002
 * dropout keep prob. = 0.5
 
-The final result for this model was:
+**_The final result for this model was:_**
 * Training time (EC2 g2.2x): 258.320 seconds
 * Training set accuracy: 0.999
 * Validation set accuracy: 0.967
@@ -116,7 +116,7 @@ Here are the German traffic signs that I found on the web:
 
 Maybe the 30 km/h speed sign would be a problem because it might be hard for a model to different from the 80 km/h signs. The model should not have any problem classifying the rest of the downloaded images. All of the images contain a straight-on perspective and are high contrast. Many of the images in the original data set have terrible contrast and are difficult to see what class they belong to.
 
-Here are the results of the prediction:
+**_Here are the results of the prediction:_**
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -131,7 +131,7 @@ Here are the results of the prediction:
 
 The model was able to correctly guess 7 of the 8 traffic signs, which gives an accuracy of 87.5%.
 
-Here are the top-5 probabilities for each sign:
+**_Here are the top-5 probabilities for each sign:_**
  
 Speed limit (30km/h):
   1. Speed limit (30km/h) -- 0.99994
