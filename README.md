@@ -78,11 +78,14 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 | Softmax				|   									|
 
 After some experimentation, the following hyperparameter values yielded the best results.
-** Weight initialization: **
+
+** Weight initialization:
+
  *MU = 0
  *SIGMA = 0.05
 
-** Training: **
+** Training:
+ 
  *EPOCHS = 200
  *BATCH_SIZE = 256
  *LEARN_RATE = 0.0002
