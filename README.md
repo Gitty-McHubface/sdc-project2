@@ -239,4 +239,4 @@ The following graphs show the accuracy and loss during training with dropout reg
 
 ![alt text][vgg_2]
 
-Cleary the first model is a better choice. While this model has marginally worse accuracy on the validation set, it takes ~41x as long to train.
+The first model is a better choice. While this model only has marginally worse accuracy on the validation set, it takes ~41x as long to train.
