@@ -10,8 +10,12 @@ The goals / steps of this project are the following:
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
-
 [//]: # (Image References)
+
+
+[sample_image]: ./sample_image.png "Sample image"
+
+[sign_hist]: ./sign_hist.png "Traffic Signs"
 
 [dl_1]: ./downloaded_sign_images/1.png "Speed limit (30km/h)"
 [dl_2]: ./downloaded_sign_images/11.png "Right-of-way at the next intersection"
@@ -22,22 +26,21 @@ The goals / steps of this project are the following:
 [dl_7]: ./downloaded_sign_images/28.png "Children crossing"
 [dl_8]: ./downloaded_sign_images/31.png "Wild animals crossing"
 
-[sign_hist]: ./sign_hist.png "Traffic Signs"
-
 ## Rubric Points
 
-###Data Set Summary & Exploration
+### Data Set Summary & Exploration
 
-####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
-
-I used the pandas library to calculate summary statistics of the traffic
+I used the python and the numpy library to calculate summary statistics of the traffic
 signs data set:
 
-* The size of training set is ?
+* The size of training set is 34799
 * The size of the validation set is ?
-* The size of test set is ?
-* The shape of a traffic sign image is ?
-* The number of unique classes/labels in the data set is ?
+* The size of test set is 12630
+* The shape of a traffic sign image is (32, 32, 3)
+* The number of unique classes/labels in the data set is 43
+
+Sample image:
+![alt_text][sample_image]
 
 ####2. Include an exploratory visualization of the dataset.
 
@@ -45,9 +48,9 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 ![alt text][sign_hist]
 
-###Design and Test a Model Architecture
+### Design and Test a Model Architecture
 
-####1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
+#### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 As a first step, I decided to convert the images to grayscale because ...
 
