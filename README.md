@@ -1,14 +1,12 @@
 # Traffic Sign Recognition
 
-**Build a Traffic Sign Recognition Project**
-
-The goals / steps of this project are the following:
+**The goals / steps of this project are the following:
 * Load the data set (see below for links to the project data set)
 * Explore, summarize and visualize the data set
 * Design, train and test a model architecture
 * Use the model to make predictions on new images
 * Analyze the softmax probabilities of the new images
-* Summarize the results with a written report
+* Summarize the results with a written report**
 
 [//]: # (Image References)
 
@@ -26,29 +24,25 @@ The goals / steps of this project are the following:
 [dl_7]: ./downloaded_sign_images/28.png "Children crossing"
 [dl_8]: ./downloaded_sign_images/31.png "Wild animals crossing"
 
-## Rubric Points
+## Data Set Summary & Exploration
 
-### Data Set Summary & Exploration
-
-I used the python and the numpy library to calculate summary statistics of the traffic
-signs data set:
+I used the python and the numpy library to calculate summary statistics of the traffic signs data set:
 
 * The size of training set is 34799
-* The size of the validation set is ?
+* The size of the validation set is 4410
 * The size of test set is 12630
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-Sample image:
+Below is a sample traffic sign image from the dataset :
+
 ![alt_text][sample_image]
 
-####2. Include an exploratory visualization of the dataset.
-
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a histogram showing the fequency of each sign type in the training, validation and testing datasets.
 
 ![alt text][sign_hist]
 
-### Design and Test a Model Architecture
+## Model Architecture
 
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
