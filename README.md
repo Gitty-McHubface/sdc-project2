@@ -27,6 +27,8 @@ The steps of this project are the following:
 
 [lenet_1]: ./trunc_b256_e100_do_lenet.png "LeNet 1"
 
+[vgg_1]: ./graph-he-b256-e100-r0001-vgg.png "VGG 1"
+
 ## Data Set Summary & Exploration
 
 I used the python and the numpy library to calculate summary statistics of the traffic signs data set:
@@ -76,6 +78,8 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 | Dropout | keep probability 0.5 |
 | Fully connected		|    43   									|
 | Softmax				|   									|
+
+After increasing the number of training epochs, I thought that the model might be overfitting the training data set due to the 11% difference between the training and validation set accuracy. I added dropout regularization and continued to fine tune the hyperparameters until the network returned the result below. 
 
 The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
@@ -137,29 +141,31 @@ My second attempt at improving validation accuracy was to try to use a deeper mo
 | Dropout | keep probability 0.5 |
 | Fully connected		|    43   									|
 | Softmax				|   									|
- 
+
+
+
 The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
 **Weight initialization:**
-* As recommended in the CS231n lecture, I used an initialization that has been shown experimentally to perform better for deep CNNs (Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification, He et al.). This was accomplished using the tf.contrib.layers.variance_scaling_initializer with factor=2.0 and mode='FAN_IN'.
+* As recommended in the CS231n lecture, I used a weight initialization that has been shown to perform better for deep CNNs (Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification, He et al.). This was accomplished using the tf.contrib.layers.variance_scaling_initializer with factor=2.0 and mode='FAN_IN'.
 
 **Training:**
-* epochs = 100
+* epochs = 150
 * batch size = 256
-* learning rate = 0.0002
+* learning rate = 0.0001
 * dropout keep prob. = 0.5
 
+The final result for this model was:
+* Training time (EC2 g2.2x): 10447.043 seconds
+* Training set accuracy: 1.000
+* Validation set accuracy: 0.960
+* Test set accuracy: 0.952
+* Downloaded image set accuracy: 0.875
 
-####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
-
-To train the model, I used an ....
+![alt text][vgg_1]
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
-My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
