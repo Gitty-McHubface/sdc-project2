@@ -25,7 +25,7 @@ The steps of this project are the following:
 [dl_7]: ./downloaded_sign_images/28.png "Children crossing"
 [dl_8]: ./downloaded_sign_images/31.png "Wild animals crossing"
 
-[lenet_1]: ./trunc_b256_e100_do_lenet.png "LeNet 1"
+[lenet_1]: ./trunc_b256_e100_do_lenet.pdf "LeNet 1"
 
 ## Data Set Summary & Exploration
 
