@@ -84,11 +84,11 @@ After increasing the number of training epochs, I thought that the model might b
 
 The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
-**Weight initialization:**
+**_Weight initialization:_**
 * mean = 0
 * stddev = 0.05
 
-**Training:**
+**_Training:_**
 * epochs = 100
 * batch size = 256
 * learning rate = 0.0002
@@ -106,6 +106,15 @@ The following graphs show the accuracy and loss during training:
 ![alt text][lenet_1]
 
 The graph on the left shows the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the loss for the last 10 epochs of training.
+
+**Testing On New Images**
+
+Here are the German traffic signs that I found on the web:
+
+![alt text][dl_1] ![alt text][dl_2] ![alt text][dl_3] ![alt text][dl_4] 
+![alt text][dl_5] ![alt text][dl_6] ![alt text][dl_7] ![alt text][dl_8]
+
+
 
 ### Model 2
 
@@ -146,10 +155,10 @@ My second attempt at improving validation accuracy was to try to use a deeper mo
 
 The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
-**Weight initialization:**
+**_Weight initialization:_**
 * As recommended in the CS231n lecture, I used a weight initialization that has been shown to perform better for deep CNNs (Delving Deep into Rectifiers: Surpassing Human-Level Performance on ImageNet Classification, He et al.). This was accomplished using the tf.contrib.layers.variance_scaling_initializer with factor=2.0 and mode='FAN_IN'.
 
-**Training:**
+**_Training:_**
 * epochs = 150
 * batch size = 256
 * learning rate = 0.0001
