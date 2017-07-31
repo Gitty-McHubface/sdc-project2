@@ -25,7 +25,7 @@ The steps of this project are the following:
 [dl_7]: ./downloaded_sign_images/28.png "Children crossing"
 [dl_8]: ./downloaded_sign_images/31.png "Wild animals crossing"
 
-[lenet_1]: ./trunc_b256_e100_do_lenet.pdf "LeNet 1"
+[lenet_1]: ./trunc_b256_e100_do_lenet.png "LeNet 1"
 
 ## Data Set Summary & Exploration
 
@@ -77,11 +77,16 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 | Fully connected		|    43   									|
 | Softmax				|   									|
 
-After some experimentation, the following hyperparameter values yielded the best results:
-EPOCHS = 200
-BATCH_SIZE = 256
-LEARN_RATE = 0.0002
-DROPOUT_KEEP = 0.5
+After some experimentation, the following hyperparameter values yielded the best results.
+** Weight initialization: **
+ *MU = 0
+ *SIGMA = 0.05
+
+** Training: **
+ *EPOCHS = 200
+ *BATCH_SIZE = 256
+ *LEARN_RATE = 0.0002
+ *DROPOUT_KEEP = 0.5
 
 ![alt text][lenet_1]
 
