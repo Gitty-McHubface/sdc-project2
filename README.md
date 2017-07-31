@@ -105,7 +105,7 @@ The following graphs show the accuracy and loss during training:
 
 ![alt text][lenet_1]
 
-The graph on the left shows the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the loss for the last 10 epochs of training.
+The graph on the left shows the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the average loss for the last 10 epochs of training.
 
 **Testing On New Images**
 
@@ -235,7 +235,7 @@ The following graphs show the accuracy and loss during training without regulari
 
 ![alt text][vgg_1]
 
-The graph on the left shows the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the loss for the last 10 epochs of training. Clearly, this model is overfitting the training data set.
+The graph on the left shows the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the average loss for the last 10 epochs of training. Clearly, this model is overfitting the training data set.
 
 The following graphs show the accuracy and loss during training with dropout regularization on the hidden fully-connected layers:
 
