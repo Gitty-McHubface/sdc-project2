@@ -61,11 +61,11 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 28x28x3 RGB image   							| 
-| Convolution 5x5     	| 1x1 stride, valid padding, outputs 32x32x6 	|
+| Input         		| 32x32x3 RGB image   							| 
+| Convolution 5x5x3     	| 1x1 stride, valid padding, outputs 28x28x6 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x6 				|
-| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16     									|
+| Convolution 5x5x6	    | 1x1 stride, valid padding, outputs 10x10x16     									|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
 | Fully connected		| 140        									|
@@ -89,7 +89,8 @@ After some experimentation, the following hyperparameter values yielded the best
 * learning rate = 0.0002
 * dropout keep prob. = 0.5
 
-The final results for this model was:
+The final result for this model was:
+* Training time (EC2 g2.2x): 258.320 seconds
 * Training set accuracy: 0.999
 * Validation set accuracy: 0.967
 * Test set accuracy: 0.949
@@ -99,21 +100,43 @@ The following graphs show the accuracy and loss during training:
 
 ![alt text][lenet_1]
 
-The graph on the left show the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the loss for the last 10 epochs of training.
+The graph on the left shows the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the loss for the last 10 epochs of training.
 
 ### Model 2
 
-My second attempt at improving validation accuracy was to try to use a deeper model similar to VGGNet. The model had the following architecture:
+My second attempt at improving validation accuracy was to try to use a deeper model with an architecture similar to VGGNet. The model has the following architecture:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Convolution 3x3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| RELU					|												|
+| Convolution 3x3x64	    | 1x1 stride, same padding, outputs 32x32x64     									|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
+| Convolution 3x3x64	    | 1x1 stride, same padding, outputs 16x16x128     									|
+| RELU					|												|
+| Convolution 3x3x128	    | 1x1 stride, same padding, outputs 16x16x128     									|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 8x8x128 				|
+| Convolution 3x3x128	    | 1x1 stride, same padding, outputs 8x8x256     									|
+| RELU					|												|
+| Convolution 3x3x256	    | 1x1 stride, same padding, outputs 8x8x256     									|
+| RELU					|												|
+| Convolution 3x3x256	    | 1x1 stride, same padding, outputs 8x8x256     									|
+| RELU					|				
+| Max pooling	      	| 2x2 stride,  outputs 4x4x256 				|
+| Fully connected		| 2048        									|
+| RELU					|												|
+| Dropout | keep probability 0.5 |
+| Fully connected		| 2048       									|
+| RELU					|										|
+| Dropout | keep probability 0.5 |
+| Fully connected		| 1024       									|
+| RELU					|										|
+| Dropout | keep probability 0.5 |
+| Fully connected		|    43   									|
+| Softmax				|   									|
  
 
 
