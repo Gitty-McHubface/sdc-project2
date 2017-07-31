@@ -80,9 +80,9 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 | Fully connected		|    43   									|
 | Softmax				|   									|
 
-After increasing the number of training epochs, I thought that the model might be overfitting the training data set due to the 11% difference between the training and validation set accuracy. I added dropout regularization and continued to fine tune the hyperparameters until the network returned the result below. 
+After increasing the number of training epochs and lowering the learning rate, I thought that the model might be overfitting the training data set due to the 100% accuracy and an 11% difference with validation set accuracy. I added dropout regularization and continued to fine tune the hyperparameters until the model returned the result below. 
 
-The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. The following hyperparameter values yielded the best results.
+The network was trained using the TensorFlow AdamOptimizer to minimize the cross entropy loss function. The following hyperparameter values yielded the best results.
 
 **_Weight initialization:_**
 * mean = 0
@@ -95,7 +95,7 @@ The model was trained using the TensorFlow AdamOptimizer to reduce the cross ent
 * dropout keep prob. = 0.5
 
 **_The final result for this model was:_**
-* Training time (EC2 g2.2x): 258.320 seconds
+* Training time (EC2 g2.2xlage): 258.320 seconds
 * Training set accuracy: 0.999
 * Validation set accuracy: 0.967
 * Test set accuracy: 0.949
@@ -114,7 +114,7 @@ Here are the German traffic signs that I found on the web:
 ![alt text][dl_1] ![alt text][dl_2] ![alt text][dl_3] ![alt text][dl_4] 
 ![alt text][dl_5] ![alt text][dl_6] ![alt text][dl_7] ![alt text][dl_8]
 
-Maybe the 30 km/h speed sign would be a problem because it might be hard for a model to different from the 80 km/h signs. The model should not have any problem classifying the rest of the downloaded images. All of the images contain a straight-on perspective and are high contrast. Many of the images in the original data set have terrible contrast and are difficult to see what class they belong to.
+The 30 km/h speed sign might be difficult to classify because it might be hard for a model to differentiate it from the 80 km/h signs. The model should not have any problem classifying the rest of the downloaded images. All of the images contain a straight-on perspective and are high contrast. Many of the images in the original data set have terrible contrast and are difficult to see what class they belong to.
 
 **_Here are the results of the prediction:_**
 
@@ -211,6 +211,7 @@ My second attempt at improving validation accuracy was to try to use a deeper mo
 | Fully connected		|    43   									|
 | Softmax				|   									|
 
+I decided to base the model off of VGGNet because I wanted to experiment with regularization using a deeper model with wider layers.
 
 The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
 
@@ -240,4 +241,4 @@ The following graphs show the accuracy and loss during training with dropout reg
 
 ![alt text][vgg_2]
 
-While this model has marginally worse accuracy on the validation set, it is much larger than LeNet and takes ~41x as long to train.
+While this model has marginally worse accuracy on the validation set, it takes ~41x as long to train.
