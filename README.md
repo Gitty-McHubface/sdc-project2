@@ -114,7 +114,7 @@ Here are the German traffic signs that I found on the web:
 ![alt text][dl_1] ![alt text][dl_2] ![alt text][dl_3] ![alt text][dl_4] 
 ![alt text][dl_5] ![alt text][dl_6] ![alt text][dl_7] ![alt text][dl_8]
 
-
+The model should not have any problem classifying any of these images. All of these images contain a straight-on perspective and are high contrast. Clearly I was biased when selecting them. Many of the images in the original data set have terrible contrast and are difficult for me to determine what class they belong to.
 
 ### Model 2
 
@@ -169,7 +169,6 @@ The final result for this model was:
 * Training set accuracy: 1.000
 * Validation set accuracy: 0.960
 * Test set accuracy: 0.952
-
 
 ![alt text][vgg_1]
 
