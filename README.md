@@ -82,7 +82,7 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 
 After increasing the number of training epochs, I thought that the model might be overfitting the training data set due to the 11% difference between the training and validation set accuracy. I added dropout regularization and continued to fine tune the hyperparameters until the network returned the result below. 
 
-The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. After some experimentation, the following hyperparameter values yielded the best results.
+The model was trained using the TensorFlow AdamOptimizer to reduce the cross entropy loss function. The following hyperparameter values yielded the best results.
 
 **_Weight initialization:_**
 * mean = 0
