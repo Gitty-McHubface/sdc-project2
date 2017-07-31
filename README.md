@@ -45,11 +45,11 @@ Below is a histogram showing the distribution of sign types in the training, val
 
 ## Model Architecture
 
-As a first step, I decided to zero center each color channel of the training images. I did this because... Below is the color of the mean of each color channel in the training dataset.
+As a first step, I decided to zero center each color channel of the training images. I did this because... Below is an image showing the color of the mean of each color channel in the training dataset.
 
 ![alt_text][mean_image]
 
-I decided not to normalize the images since the range of values is already restricted between 0 and 255 for images.
+I decided not to normalize the images since the range of the possible values for the features (pixels) is nearly equal (0-255).
 
 My final model consisted of the following layers:
 
