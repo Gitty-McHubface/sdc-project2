@@ -55,7 +55,9 @@ I decided not to normalize the images since the range of the possible values for
 
 ## Model Architecture
 
-My first attempt at improving validation accuracy was to modify the hyperparameters to LeNet. LeNet has the following architecture:
+### Model 1
+
+My first attempt at improving validation accuracy was to modify LeNet by adding dropout regularization to the fully connected hidden layers and adjusting the hyperparameters. The model has the following architecture:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -68,8 +70,10 @@ My first attempt at improving validation accuracy was to modify the hyperparamet
 | Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
 | Fully connected		| 140        									|
 | RELU					|												|
+| Dropout | keep probability 0.5 |
 | Fully connected		| 84       									|
 | RELU					|										|
+| Dropout | keep probability 0.5 |
 | Fully connected		|    43   									|
 | RELU					|												|
 | Softmax				|   									|
