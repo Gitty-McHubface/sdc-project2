@@ -80,18 +80,26 @@ My first attempt at improving validation accuracy was to modify LeNet by adding 
 After some experimentation, the following hyperparameter values yielded the best results.
 
 **Weight initialization:**
-
-* MU = 0
-* SIGMA = 0.05
+* mean = 0
+* stddev = 0.05
 
 **Training:**
- 
- *EPOCHS = 200
- *BATCH_SIZE = 256
- *LEARN_RATE = 0.0002
- *DROPOUT_KEEP = 0.5
+* epochs = 100
+* batch size = 256
+* learning rate = 0.0002
+* dropout keep prob. = 0.5
+
+The final results for this model was:
+* Training set accuracy: 0.999
+* Validation set accuracy: 0.967
+* Test set accuracy: 0.949
+* Downloaded image set accuracy: 0.875
+
+The following graphs show the accuracy and loss during training:
 
 ![alt text][lenet_1]
+
+The graph on the left show the validation and training set accuracy during training. The blue line is the training set accuracy and the green line is the validation set accuracy. The graph on the right shows the loss for the last 10 epochs of training.
 
 ### Model 2
 
